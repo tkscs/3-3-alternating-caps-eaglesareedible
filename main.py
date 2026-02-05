@@ -1,3 +1,4 @@
+import string
 def alt_caps(original_string):
     """Convert a string to Alternating Caps
 
@@ -10,9 +11,14 @@ def alt_caps(original_string):
         aLtErNaTiNg CaPiTaLiZaTiOn
     """
     new_string = ""
-
-    # YOUR CODE HERE
-
+    original_string = "alternating capitalization"
+    runtime=-1
+    for i in original_string:
+        if runtime%2 == 0:
+            newCharacter=i.upper()
+        else:
+            newCharacter=i
+        new_string += newCharacter
+        runtime+=1
     return new_string
-
 print(alt_caps("Alternating Capitalization"))
