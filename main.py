@@ -16,10 +16,9 @@ def alt_caps(original_string):
     for i in original_string:
         if runtime%2 == 0:
             newCharacter=i.upper()
-            new_string+= newCharacter
         else:
             newCharacter=i
-            new_string += newCharacter
+        new_string += newCharacter
         runtime+=1
     return new_string
 print(alt_caps("Alternating Capitalization"))
